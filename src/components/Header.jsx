@@ -1,12 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import airbnblogo from "../assets/airbnblogo.png";
+import Search from "./search/Search";
+import { Link } from "react-router-dom";
+import Login from "./login/Login";
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <HeaderLogo src={airbnblogo} alt="airbnb logo" />
-      <HeaderTitle>Airbnb Clone</HeaderTitle>
+      <Link to="/portfolio_2">
+        <HeaderLogo src={airbnblogo} alt="airbnb logo" />
+      </Link>
+      <Search />
+      <Login />
     </HeaderContainer>
   );
 };
@@ -17,8 +23,8 @@ const HeaderContainer = styled.header`
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 10rem 0.5rem 10rem;
-  background-color: #fff;
+  padding: 0.5rem 15rem 0.5rem 15rem;
+  background-color: #ffffff;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -35,19 +41,9 @@ const HeaderContainer = styled.header`
 const HeaderLogo = styled.img`
   width: auto;
   height: 4rem;
+  cursor: pointer;
   @media (max-width: 768px) {
     width: auto;
     height: 1rem;
-  }
-`;
-
-const HeaderTitle = styled.h1`
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0;
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
   }
 `;
