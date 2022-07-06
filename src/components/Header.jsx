@@ -32,18 +32,14 @@ const HeaderContainer = styled.header`
   right: 0;
   z-index: 1;
   @media (max-width: 768px) {
-    flex-direction: column;
+    display: flex;
     align-items: flex-start;
-    padding: 0.5rem;
+    padding: 0.1rem;
   }
 `;
 
 const HeaderLogo = styled.img`
   width: auto;
-  height: 4rem;
+  height: 3.5rem;
   cursor: pointer;
-  @media (max-width: 768px) {
-    width: auto;
-    height: 1rem;
-  }
 `;

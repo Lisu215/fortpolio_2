@@ -49,6 +49,9 @@ const CityContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 8rem;
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
 `;
 
 const CityItem = styled.div`

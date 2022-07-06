@@ -18,12 +18,14 @@ const Search = () => {
         <StyledInput placeholder="어디로 여행가세요?" />
       </Input>
       <Divider />
-      <Input title="날짜"> 원하는 날짜를 입력하세요 </Input>
+      <Input title="날짜">
+        <Calendar />
+      </Input>
       <Divider />
       <Input title="인원" onClick={handleOpen}>
         {count === 0 ? "게스트를 선택하세요" : `게스트 ${count}명`}
       </Input>
-      <Calendar />
+
       {isOpen && <PeopleModal setCount={setCount} setIsOpen={setIsOpen} />}
     </SearchItemContainer>
   );
@@ -40,6 +42,9 @@ const SearchItemContainer = styled.div`
   background-color: #ffffff;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
   border-radius: 32px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 const StyledInput = styled.input`
   text-align: center;

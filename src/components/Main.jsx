@@ -79,7 +79,12 @@ const HotelList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding: 1.5rem 0;
+  @media (max-width: 768px) {
+    justify-content: center;
+    padding: 1rem;
+  }
 `;
 
 const HotelItem = styled.li`
@@ -96,9 +101,8 @@ const HotelItem = styled.li`
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
-    margin: 0.5rem 0;
+    width: 250px;
+    height: 350px;
   }
 `;
 
@@ -107,10 +111,8 @@ const HotelImage = styled.img`
   height: 350px;
   margin-top: 1rem;
   border-radius: 0.5rem;
-
   @media (max-width: 768px) {
-    width: 100%;
-    height: auto;
+    width: 75%;
   }
 `;
 
@@ -121,9 +123,7 @@ const HotelInfo = styled.div`
   align-items: center;
   padding: 0.5rem;
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.5rem;
+    padding: 0;
   }
 `;
 
@@ -132,7 +132,7 @@ const HotelTitle = styled.h2`
   font-weight: bold;
   margin: 0.1;
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
   }
 `;
@@ -140,9 +140,6 @@ const HotelTitle = styled.h2`
 const HotelAddress = styled.p`
   font-size: 0.9rem;
   margin: 0;
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-  }
 `;
 
 const HotelTel = styled.p`

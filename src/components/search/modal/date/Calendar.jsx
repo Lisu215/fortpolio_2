@@ -26,10 +26,6 @@ const Calendar = () => {
 export default Calendar;
 
 const SDatePicker = styled(DatePicker)`
-  position: absolute;
-  margin-top: -20px;
-  right: 21rem;
-  top: 0.9rem;
   text-align: center;
   z-index: 1;
   cursor: pointer;

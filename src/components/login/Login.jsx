@@ -39,8 +39,10 @@ const LoginContainer = styled.div`
     background-color: #f5f5f5;
   }
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
+    width: 55px;
+    height: 37px;
+    border-radius: 1rem;
     padding: 0.5rem;
+    box-shadow: 0;
   }
 `;
